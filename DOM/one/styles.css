@@ -1,0 +1,12 @@
+#bg-black{
+    background-color: black;
+    color: aliceblue;
+}
+.Box {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(111, 255, 0);
+    border: 2px solid blue;
+    text-align: center;
+    margin: 5px;
+}

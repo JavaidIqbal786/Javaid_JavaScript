@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style = "background-color: black; color: aliceblue;">
+    <ul class = "language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    // add lang
+    function addlanguage (langName) {
+        const li = document.createElement('li');
+        li.innerHTML = langName;
+        document.querySelector('.language').appendChild(li)
+    }
+    addlanguage("python")
+    addlanguage("C++")
+// Optimized Approch
+    function addoptilange (langeName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langeName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addoptilange("React")
+
+    // Edit
+    let thirdlang = document.querySelector("li:nth-child(3)")
+    //console.log(thirdlang);
+    let newli = document.createElement('li')
+    newli.textContent="Flutter"
+    thirdlang.replaceWith(newli)
+    
+    // Edit
+    let seclang = document.querySelector("li:nth-child(2)")
+    seclang.outerHTML='<li>Kotlin</li>'
+
+    //remove
+    let lastlang = document.querySelector("li:last-child")
+    lastlang.remove()
+
+    //add button
+    let button = document.createElement('button');
+    button.innerText = "Click Me";
+    console.log(button);
+    let ulList = document.querySelector('ul');
+    ulList.append(button)
+
+    // add heading in ul
+    let heading = document.createElement('h1');
+    heading.innerText = "Languages";
+    ulList = document.querySelector('ul');
+    //ulList.prepend(heading);
+    ulList.before(heading);
+
+
+</script>
+</html>
